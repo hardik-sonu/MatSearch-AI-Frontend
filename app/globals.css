@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-ibm-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Colors based on Stitch design */
+  --color-canvas-base: #F8F9FA;
+  --color-canvas-secondary: #F0F2F5;
+  --color-surface: #FFFFFF;
+  --color-border-default: #E2E5E9;
+  --color-border-contrast: #CBD2D9;
+  
+  --color-primary-text: #1A1D20;
+  --color-secondary-text: #5A6472;
+  --color-tertiary-text: #8895A7;
+
+  /* Status Colors */
+  --color-status-pass-fg: #1B7F48;
+  --color-status-pass-bg: #EBF7EE;
+  --color-status-pass-border: #A4D9B2;
+
+  --color-status-warn-fg: #9A6700;
+  --color-status-warn-bg: #FEF8E7;
+  --color-status-warn-border: #F5D38A;
+
+  --color-status-fail-fg: #B42318;
+  --color-status-fail-bg: #FEF3F2;
+  --color-status-fail-border: #FECDCA;
+
+  --color-status-info-fg: #175CD3;
+  --color-status-info-bg: #EFF8FF;
+  --color-status-info-border: #B2DDFF;
+
+  /* Primary Button Colors */
+  --color-primary: #1E4B8A;
+  --color-primary-hover: #0F356B;
+  --color-primary-active: #0A254A;
+}
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+body {
+  background-color: var(--color-canvas-base);
+  color: var(--color-primary-text);
+}
